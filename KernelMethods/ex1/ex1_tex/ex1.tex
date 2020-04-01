@@ -1,0 +1,26 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{amsmath}
+\begin{document}
+\title{Exercise 1\\{\Large Kernel Methods in Machine Learning}}
+\maketitle
+\section{Question 1}
+\subsection{}
+\begin{itemize}
+\item $k_1(\mathbf{x}, \mathbf{y})=c$ is a kernel, given $\forall \mathbf{x}, \phi(\mathbf{x})=\sqrt{c}$.
+\item $k_2(\mathbf{x}, \mathbf{y})=\langle\mathbf{x}, \mathbf{y}\rangle$ is a kernel, given $\forall \mathbf{x}, \phi(\mathbf{x})=\mathbf{x}$.
+\item According to the rule that conic sum of kernel is a kernel, $k_3(\mathbf{x}, \mathbf{y})=\langle\mathbf{x}, \mathbf{y}\rangle+c$ is a kernel.
+\item According to the rule that product of kernel functions is a kernel, $K(\mathbf{x},\mathbf{y})=(\langle\mathbf{x}, \mathbf{y}\rangle+c)^m$ is a kernel.
+\end{itemize}
+\subsection{}
+The expansion of $K(\mathbf{x}, \mathbf{y}) =( \langle \mathbf{x}, \mathbf{y} \rangle)^3$ is:\\
+\begin{align*}
+K(\mathbf{x}, \mathbf{y})  = x_1y_1x_1y_1x_1y_1+x_1y_1x_2y_2x_1y_1+x_2y_2x_1y_1x_1y_1+
+x_2y_2x_2y_2x_1y_1+\\x_1y_1x_1y_1x_2y_2+x_1y_1x_2y_2x_2y_2+
+x_2y_2x_1y_1x_2y_2+x_2y_2x_2y_2x_2y_2
+\end{align*}
+So we get:
+\begin{align*}
+&\phi(\mathbf{x}) = (x_1x_1x_1,x_1x_2x_1,x_2x_1x_1,x_2x_2x_1,x_1x_1x_2,x_1x_2x_2,x_2x_1x_2,x_2x_2x_2)\\
+&\phi(\mathbf{y}) = (y_1y_1y_1,y_1y_2y_1,y_2y_1y_1,y_2y_2y_1,y_1y_1y_2,y_1y_2y_2,y_2y_1y_2,y_2y_2y_2)\\
+\end{align*}
+\end{document}
